@@ -1,28 +1,5 @@
 #!/bin/bash
 
-# See: https://prohashing.com/tools/miner-configurator/
-
-# Example:
-# export CPUMINER_USERNAME=yourUsername
-# CPUMINER_URI=stratum+tcp://prohashing.com:3336 -p "a=scrypt"
-# ./start.sh
-
-# Doge:
-# export CPUMINER_URI="stratum+tcp://prohashing.com:3333"
-# export CPUMINER_PASSWORD="a=scrypt,c=dogecoin,n=RPi1"
-
-# Scrypt:
-# export CPUMINER_URI="stratum+tcp://prohashing.com:3333"
-# export CPUMINER_PASSWORD="a=scrypt,d=16384,n=RPi1"
-
-# Ethereum:
-# export CPUMINER_URI="stratum+tcp://prohashing.com:3339"
-# export CPUMINER_PASSWORD="a=ethash,c=ethereum,n=RPi1"
-
-# Other:
-# export CPUMINER_URI="stratum+tcp://prohashing.com:3336"
-# export CPUMINER_PASSWORD="a=equihash,n=RPi1"
-
 VERSION="v0.0.1"
 DNAME="cpu_miner"
 
