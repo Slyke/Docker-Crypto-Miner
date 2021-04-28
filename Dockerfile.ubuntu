@@ -1,7 +1,8 @@
-FROM ubuntu:14.04
+FROM ubuntu:latest
 
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update -qq
-RUN apt install -y git screen curl netcat
+RUN apt install -y git screen curl netcat nano
 RUN apt install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++
 
 # USER pi
@@ -19,4 +20,6 @@ RUN make
 
 COPY ./src ./
 
-CMD [ "./mine.sh" ]
+RUN chmod 755 ./mine.ubuntu.sh
+
+CMD [ "./mine.ubuntu.sh" ]

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Ubuntu cpuminer bootstrap script"
 if [[ -z "$CPASSWORD" ]]; then
   echo "Starting miner with algorithm '$CALGO'"
   ./cpuminer -a $CALGO -o $CURI -u $CUSERNAME

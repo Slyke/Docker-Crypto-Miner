@@ -34,7 +34,7 @@ $ ./start.sh rebuild
 More examples:
 ```
 $ export CPUMINER_USERNAME=yourUsername
-$ CPUMINER_URI=stratum+tcp://prohashing.com:3336 -p "a=scrypt"
+$ CPUMINER_URI="stratum+tcp://prohashing.com:3336"
 $ ./start.sh
 
 # Doge:
@@ -53,3 +53,11 @@ $ export CPUMINER_PASSWORD="a=ethash,c=ethereum,n=RPi1"
 $ export CPUMINER_URI="stratum+tcp://prohashing.com:3336"
 $ export CPUMINER_PASSWORD="a=equihash,n=RPi1"
 ```
+
+## Docker build errors on Raspberry Pi:
+If getting build errors on an RPi, run these commands:
+```
+$ wget http://ftp.us.debian.org/debian/pool/main/libs/libseccomp/libseccomp2_2.4.4-1~bpo10+1_armhf.deb
+$ sudo dpkg -i libseccomp2_2.4.4-1~bpo10+1_armhf.deb
+```
+For more details, see: https://gitlab.alpinelinux.org/alpine/aports/-/issues/12091

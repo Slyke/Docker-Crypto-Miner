@@ -1,0 +1,24 @@
+FROM alpine:latest
+
+# RUN apk update -qq
+RUN apk add --no-cache git screen curl netcat-openbsd nano
+RUN apk add --no-cache automake autoconf pkgconfig libressl-dev jansson-dev libressl-dev gmp-dev zlib-dev make g++ curl-dev
+
+# USER pi
+
+RUN git clone https://github.com/tpruvot/cpuminer-multi.git
+RUN cd cpuminer-multi
+WORKDIR /cpuminer-multi
+
+RUN ./autogen.sh
+# RPi Config:
+RUN ./configure --disable-assembly CFLAGS="-Ofast -march=native" --with-crypto --with-curl
+# Basic *Unix config:
+# RUN ./configure CFLAGS="*-march=native*" --with-crypto --with-curl
+RUN make
+
+COPY ./src ./
+
+RUN chmod 755 ./mine.alpine.sh
+
+CMD [ "./mine.alpine.sh" ]
