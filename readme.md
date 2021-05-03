@@ -1,5 +1,25 @@
 # Docker bitcoin miner for RPi
 
+## Mining Pools:
+
+### Prohashing
+* Signup link (Referral bonus for you and me): https://prohashing.com/?r=LduKi6Fx
+* You can mine the coin of your choice, with option to automatically select most profitable coin.
+* You get paid in the coin(s) of your choice
+* Coins you mine don't have to be the coin(s) you are paid in (You can mine eth and be paid in btc).
+* Easy to setup, with configuration guides for each coin
+* Can use custom mining software.
+
+### NiceHash
+* Sign up (no referral bonuses): https://nicehash.com
+* Only pays in btc.
+* So far unable to get working on an RPi
+* Only mines most profitable coin (no configuration options)
+* Use their proprietary software (Easy to get up and running on Windows)
+* Doesn't pay as well as Prohashing, but is easier to setup for novices
+* Possible to use custom mining software, but not as easy to setup as Prohash.
+* Doesn't support CPU mining on Linux
+
 ## Run:
 ```
 $ export CPUMINER_USERNAME=yourUsername
